@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/emotion-project":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/emotion-project","hostpath":"D:/Proyectos/emotion-project","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/Proyectos/emotion-project","disabled":false,"__vagrantfile":true}}}
