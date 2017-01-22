@@ -11,13 +11,9 @@ class PostController extends Controller
     public function show($id)
     {
     	//auth()->logout();
-    	auth()->loginUsingId(1); //TEMPORARY!!
+    	auth()->loginUsingId(2); //TEMPORARY!!
     	
     	$post = Post::findOrFail($id);
-
-    	// if (auth()->user()->can('update-post', $post)){
-    	// 	return 'You can update this';
-    	// }
 
     	return view('posts.show', compact('post'));
     }
