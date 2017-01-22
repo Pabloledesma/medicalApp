@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -29,6 +29,13 @@ class User extends Authenticatable
 
     public function owns($related)
     {
-        return $this->id == $related->user_id;;
-    } 
+        return $this->id == $related->user_id;
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);        
+    }
+
+
 }
