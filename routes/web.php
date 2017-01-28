@@ -11,12 +11,19 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/inicio', function () {
     return view('home');
+});
+Route::get('/sobre-nosotros', function () {
+    return view('about');
+});
+Route::get('/articulos', function () {
+    return view('articles');
+});
+Route::get('/contacto', function () {
+    return view('contact');
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 
 Route::resource('posts', 'PostController');
